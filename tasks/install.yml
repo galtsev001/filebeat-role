@@ -1,4 +1,9 @@
 ---
+- name: Install Filebeat
+  become: true
+  yum:
+    name: "files/filebeat-{{ elk_stack_version }}-x86_64.rpm"
+    state: present
 - name: Set filebeat systemwork
   become: true
   command:
