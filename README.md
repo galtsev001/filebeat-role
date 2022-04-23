@@ -1,33 +1,33 @@
-filebeat role
+Filebeat role
 =========
 
-Роль для установки filebeat
+Роль для установки Filebeat на хостах с ОС: Debian, Ubuntu, CentOS, RHEL.
 
 Requirements
 ------------
 
-Поддреживаются ОС Linux семейств Centos.
+Поддерживаются только ОС семейств debian и EL.
 
 Role Variables
 --------------
 
-| Variable name         | Default  | Description  
-|-----------------------|----------|-------------------------  
-| filebeat_version      | "7.14.0" | Параметр, определяющий устанавливаемую версию filebeat  
-| filebeat_install_type | "remote" | Параметр, определяющий способ получения дистрибутива - удаленно или из локального файла. Возможные значения: "remote", "local"  
-
+| Variable name  | Default  | Description |
+|----------------|----------|-------------------------|
+| filebeat_version | "7.15.0" | Параметр, который определяет какой версии filebeat будет установлен |
 
 Example Playbook
 ----------------
 
-Example Playbook
-----------------
-
-	- hosts: all
-	  roles:
-		 - { role: filebeat-role }
+    - hosts: all
+      roles:
+         - { role: filebeat-role }
 
 License
 -------
 
-MIT
+BSD
+
+Author Information
+------------------
+
+An optional section for the role authors to include contact information, or a website (HTML is not allowed).
